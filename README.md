@@ -1,6 +1,8 @@
 Part Name - IMA Part-123 Not a Part345 Breakout
 ========================================
 
+See bug 10262.
+
 [![Part Name](URL for picture of part)
 *Part Name (SKU)*](URL for product on Sparkfun.com)
 
