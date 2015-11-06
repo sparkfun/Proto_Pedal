@@ -16159,11 +16159,11 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pad name="P$4" x="0" y="4.8" drill="1.2"/>
 <pad name="P$5" x="0" y="0" drill="1.2"/>
 <pad name="P$6" x="0" y="-4.8" drill="1.2"/>
-<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
-<wire x1="-9.85" y1="8.5" x2="9.85" y2="8.5" width="0.127" layer="51"/>
-<wire x1="9.85" y1="8.5" x2="9.85" y2="-8.5" width="0.127" layer="51"/>
-<wire x1="9.85" y1="-8.5" x2="-9.85" y2="-8.5" width="0.127" layer="51"/>
-<wire x1="-9.85" y1="-8.5" x2="-9.85" y2="8.5" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
+<wire x1="-9.85" y1="8.5" x2="9.85" y2="8.5" width="0.127" layer="21"/>
+<wire x1="9.85" y1="8.5" x2="9.85" y2="-8.5" width="0.127" layer="21"/>
+<wire x1="9.85" y1="-8.5" x2="-9.85" y2="-8.5" width="0.127" layer="21"/>
+<wire x1="-9.85" y1="-8.5" x2="-9.85" y2="8.5" width="0.127" layer="21"/>
 <text x="-2.81" y="1.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.81" y="-2.905" size="1.27" layer="27">&gt;VALUE</text>
 <pad name="P$7" x="5.3" y="4.8" drill="1.2"/>
@@ -16228,8 +16228,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <deviceset name="SWITCH-3PDT" prefix="SW">
 <gates>
 <gate name="A" symbol="SW_SPDT_POL" x="0" y="7.62" addlevel="always"/>
-<gate name="B" symbol="SW_SPDT_POL" x="15.24" y="7.62" addlevel="always"/>
-<gate name="C" symbol="SW_SPDT_POL" x="30.48" y="7.62" addlevel="always"/>
+<gate name="B" symbol="SW_SPDT_POL" x="17.78" y="7.62" addlevel="always"/>
+<gate name="C" symbol="SW_SPDT_POL" x="35.56" y="7.62" addlevel="always"/>
 </gates>
 <devices>
 <device name="" package="STOMP-SWITCH-3PDT">
@@ -19395,22 +19395,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 <rectangle x1="-0.1905" y1="-0.381" x2="0.1905" y2="0.381" layer="21"/>
 </package>
-<package name="0603-RES@1">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
-<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-<rectangle x1="-0.2286" y1="-0.381" x2="0.2286" y2="0.381" layer="21"/>
-</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -19430,13 +19414,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="1KOHM1/10W1%(0603)" prefix="R" uservalue="yes">
+<deviceset name="1KOHM-1/10W-1%(0603)" prefix="R" uservalue="yes">
 <description>RES-07856</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="0603-RES@1">
+<device name="" package="0603-RES">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -19445,26 +19429,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="PROD_ID" value="RES-07856"/>
 <attribute name="VALUE" value="1K" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="1MOHM1/10W1%(0603)" prefix="R" uservalue="yes">
-<description>RES-07868</description>
-<gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="0603-RES@1">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-07868" constant="no"/>
-<attribute name="VALUE" value="1M" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -19627,19 +19591,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="PAD-JUMPER-2-NC_BY_PASTE_YES_SILK">
-<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.2032" layer="21"/>
-<wire x1="0.8" y1="1" x2="1" y2="0.7" width="0.2032" layer="21" curve="-90.076445"/>
-<wire x1="-1" y1="0.7" x2="-0.8" y2="1" width="0.2032" layer="21" curve="-90.03821"/>
-<wire x1="-1" y1="-0.7" x2="-0.8" y2="-1" width="0.2032" layer="21" curve="90.03821"/>
-<wire x1="0.8" y1="-1" x2="1" y2="-0.7" width="0.2032" layer="21" curve="90.03821"/>
-<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.2032" layer="21"/>
-<smd name="1" x="-0.4009" y="0" dx="0.635" dy="1.27" layer="1" rot="R180" cream="no"/>
-<smd name="2" x="0.4127" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
-<text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.016" y1="-1.016" x2="1.016" y2="1.016" layer="31"/>
-</package>
 <package name="PAD-JUMPER-2-NC_BY_PASTE_YES_SILK_FULL_BOX">
 <description>Small solder jumper with big paste layer so it will short during reflow.</description>
 <wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.1524" layer="21"/>
@@ -19662,6 +19613,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
 <rectangle x1="-1.016" y1="-1.016" x2="1.016" y2="1.016" layer="31"/>
+</package>
+<package name="PAD-JUMPER-2-NC_BY_PASTE_YES_SILK">
+<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.2032" layer="21"/>
+<wire x1="0.8" y1="1" x2="1" y2="0.7" width="0.2032" layer="21" curve="-90.076445"/>
+<wire x1="-1" y1="0.7" x2="-0.8" y2="1" width="0.2032" layer="21" curve="-90.03821"/>
+<wire x1="-1" y1="-0.7" x2="-0.8" y2="-1" width="0.2032" layer="21" curve="90.03821"/>
+<wire x1="0.8" y1="-1" x2="1" y2="-0.7" width="0.2032" layer="21" curve="90.03821"/>
+<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.2032" layer="21"/>
+<smd name="1" x="-0.4009" y="0" dx="0.635" dy="1.27" layer="1" rot="R180" cream="no"/>
+<smd name="2" x="0.4127" y="0" dx="0.635" dy="1.27" layer="1" cream="no"/>
+<text x="-0.9525" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-0.9525" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.2192" y1="-1.016" x2="1.2192" y2="1.016" layer="31"/>
 </package>
 </packages>
 <symbols>
@@ -31296,8 +31260,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="P$1" x="0" y="0" drill="1.016"/>
 <pad name="P$2" x="2" y="0" drill="1.016"/>
 <pad name="P$3" x="5" y="0" drill="1.016"/>
-<text x="1.27" y="1.27" size="0.6096" layer="51">&gt;NAME</text>
-<text x="1.27" y="-1.27" size="0.6096" layer="51">&gt;VALUE</text>
+<text x="1.27" y="1.27" size="0.6096" layer="25">&gt;NAME</text>
+<text x="1.27" y="-1.27" size="0.6096" layer="27">&gt;VALUE</text>
 <wire x1="-1.016" y1="1.778" x2="-1.016" y2="0.254" width="0.127" layer="51"/>
 <wire x1="-1.778" y1="1.016" x2="-0.254" y2="1.016" width="0.127" layer="51"/>
 <circle x="2.5" y="0" radius="4.5" width="0.127" layer="51"/>
@@ -31695,7 +31659,7 @@ Allows for population of PTH caps with 2mm or 5mm lead spacing.  For times when 
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="R1" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
+<part name="R1" library="SparkFun-Resistors" deviceset="1KOHM-1/10W-1%(0603)" device="" value="1K"/>
 <part name="D2" library="SparkFun-Connectors" deviceset="M02" device="PTH3" value="PTH-LED"/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -31703,7 +31667,7 @@ Allows for population of PTH caps with 2mm or 5mm lead spacing.  For times when 
 <part name="J1" library="Testing" deviceset="POWER_JACK" device="SMD_FIXED" value="POWER_JACKSMD_FIXED"/>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="DMG2307L" value="2.5A/30V"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R3" library="SparkFun-Resistors" deviceset="1MOHM1/10W1%(0603)" device="" value="1M"/>
+<part name="R3" library="SparkFun-Resistors" deviceset="1MOHM-1/10W-1%(0603)" device="" value="1M"/>
 <part name="JP77" library="SparkFun-Connectors" deviceset="M30" device="NO_SILK" value="1x30"/>
 <part name="JP78" library="SparkFun-Connectors" deviceset="M30" device="NO_SILK" value="1x30"/>
 <part name="JP71" library="SparkFun-Connectors" deviceset="M03" device="1X03_NO_SILK" value="1x3"/>
@@ -31751,7 +31715,7 @@ Allows for population of PTH caps with 2mm or 5mm lead spacing.  For times when 
 <part name="JP93" library="SparkFun-Connectors" deviceset="M09" device="NO_SILK" value="1x9"/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="R2" library="SparkFun-Resistors" deviceset="1KOHM1/10W1%(0603)" device="" value="1K"/>
+<part name="R2" library="SparkFun-Resistors" deviceset="1KOHM-1/10W-1%(0603)" device="" value="1K"/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="TP3" library="SparkFun-Connectors" deviceset="M01" device="PTH_NO_SILK_YES_STOP" value="Out Ring"/>
@@ -31843,10 +31807,10 @@ PCB has dual footprint that accepts
 <instance part="GND2" gate="1" x="33.02" y="99.06"/>
 <instance part="GND3" gate="1" x="195.58" y="99.06"/>
 <instance part="JP70" gate="G$1" x="22.86" y="149.86" rot="MR180"/>
-<instance part="J1" gate="G$1" x="27.94" y="172.72" rot="MR180"/>
-<instance part="Q1" gate="G$1" x="66.04" y="170.18" rot="R90"/>
+<instance part="J1" gate="G$1" x="27.94" y="170.18" rot="MR180"/>
+<instance part="Q1" gate="G$1" x="66.04" y="167.64" rot="R90"/>
 <instance part="GND4" gate="1" x="66.04" y="142.24"/>
-<instance part="R3" gate="G$1" x="66.04" y="154.94" rot="R90"/>
+<instance part="R3" gate="G$1" x="66.04" y="152.4" rot="R90"/>
 <instance part="JP85" gate="G$1" x="71.12" y="71.12" rot="MR0"/>
 <instance part="GND6" gate="1" x="50.8" y="63.5"/>
 <instance part="LOGO1" gate="G$1" x="88.9" y="0"/>
@@ -31922,7 +31886,7 @@ PCB has dual footprint that accepts
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="66.04" y1="149.86" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="147.32" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -32065,8 +32029,8 @@ PCB has dual footprint that accepts
 <segment>
 <pinref part="Q1" gate="G$1" pin="S"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="71.12" y1="170.18" x2="83.82" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="170.18" x2="83.82" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="167.64" x2="83.82" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="167.64" x2="83.82" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP85" gate="G$1" pin="2"/>
@@ -32189,14 +32153,14 @@ PCB has dual footprint that accepts
 <segment>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <pinref part="J1" gate="G$1" pin="GND"/>
-<wire x1="30.48" y1="170.18" x2="60.96" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="167.64" x2="60.96" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$75" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="Q1" gate="G$1" pin="G"/>
-<wire x1="66.04" y1="160.02" x2="66.04" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="157.48" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -32233,9 +32197,9 @@ PCB has dual footprint that accepts
 <segment>
 <pinref part="JP70" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="149.86" x2="38.1" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="149.86" x2="38.1" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="149.86" x2="38.1" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="GNDBREAK"/>
-<wire x1="38.1" y1="167.64" x2="30.48" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="165.1" x2="30.48" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$55" class="0">
@@ -32246,8 +32210,8 @@ PCB has dual footprint that accepts
 <pinref part="JP70" gate="G$1" pin="2"/>
 <wire x1="30.48" y1="147.32" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="PWR"/>
-<wire x1="30.48" y1="165.1" x2="40.64" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="165.1" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="162.56" x2="40.64" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="162.56" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
 <junction x="40.64" y="147.32"/>
 <pinref part="TP4" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="144.78" x2="40.64" y2="144.78" width="0.1524" layer="91"/>
