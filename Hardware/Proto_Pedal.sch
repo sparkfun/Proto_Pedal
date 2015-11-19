@@ -20403,7 +20403,7 @@ digital circuits, or
 buffered VCC/2 reference 
 voltage.</text>
 <text x="73.66" y="55.88" size="1.778" layer="97" font="vector" align="top-left">Extra proto area intended for extra power 
-supply conditioning or sililar functions.</text>
+supply conditioning or similar functions.</text>
 <text x="88.9" y="109.22" size="1.778" layer="97" font="vector" align="top-left">C1 is input coupling cap
 C2 is output coupling cap.
 Different circuits will use different values.

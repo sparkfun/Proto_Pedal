@@ -471,7 +471,7 @@ TIP NEG</text>
 <text x="71.12" y="67.31" size="1.4224" layer="21" font="vector" ratio="15" rot="R90" align="center-left">28</text>
 <text x="73.66" y="67.31" size="1.4224" layer="21" font="vector" ratio="15" rot="R90" align="center-left">29</text>
 <text x="76.2" y="67.31" size="1.4224" layer="21" font="vector" ratio="15" rot="R90" align="center-left">30</text>
-<text x="2.54" y="36.83" size="1.4224" layer="22" font="vector" ratio="15" rot="MR90" align="center-right">1</text>
+<text x="2.54" y="36.83" size="1.4224" layer="21" font="vector" ratio="15" rot="R90" align="center-right">1</text>
 <text x="5.08" y="36.83" size="1.4224" layer="21" font="vector" ratio="15" rot="R90" align="center-right">2</text>
 <text x="7.62" y="36.83" size="1.4224" layer="21" font="vector" ratio="15" rot="R90" align="center-right">3</text>
 <text x="10.16" y="36.83" size="1.4224" layer="21" font="vector" ratio="15" rot="R90" align="center-right">4</text>
