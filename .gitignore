@@ -190,3 +190,11 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+############
+## LTSpice
+############
+
+# SPICE sim temp files
+*.raw
+*.log
