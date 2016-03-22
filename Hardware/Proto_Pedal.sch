@@ -23720,7 +23720,7 @@ Allows for population of PTH caps with 2mm or 5mm lead spacing.  For times when 
 <sheet>
 <plain>
 <text x="167.64" y="7.62" size="2.54" layer="94" font="vector">Byron Jacquot</text>
-<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">V02</text>
+<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">V03</text>
 <text x="2.54" y="88.9" size="2.54" layer="97">Power Pins</text>
 <text x="50.8" y="83.82" size="2.54" layer="97">Near midpoint</text>
 <text x="218.44" y="88.9" size="1.778" layer="97" font="vector" align="top-left">Clear SJ1 to 
