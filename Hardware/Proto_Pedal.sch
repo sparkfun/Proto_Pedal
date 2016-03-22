@@ -23713,7 +23713,7 @@ Allows for population of PTH caps with 2mm or 5mm lead spacing.  For times when 
 <part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="JP4" library="Testing" deviceset="POWER_JACK_TIP_NEGATIVE" device=""/>
-<part name="TP7" library="SparkFun-Connectors" deviceset="M01" device="PTH_NO_SILK_YES_STOP" value="Out Ring"/>
+<part name="TP7" library="SparkFun-Connectors" deviceset="M01" device="PTH_LONGPAD" value="Out Ring"/>
 <part name="LOGO3" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".2_INCH" value="SFE_LOGO_FLAME.2_INCH"/>
 </parts>
 <sheets>
