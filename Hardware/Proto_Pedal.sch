@@ -24223,7 +24223,7 @@ SW1 down = Active</text>
 <sheet>
 <plain>
 <text x="167.64" y="7.62" size="2.54" layer="94" font="vector">Byron Jacquot</text>
-<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">V02</text>
+<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">V10</text>
 <text x="91.44" y="5.08" size="3.81" layer="97">30-row DIP proto area</text>
 </plain>
 <instances>
