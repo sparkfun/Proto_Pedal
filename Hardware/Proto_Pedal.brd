@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -580,12 +580,12 @@ TIP NEG</text>
 <wire x1="32.512" y1="27.016" x2="32.512" y2="25.708" width="0.2032" layer="22"/>
 <text x="19.177" y="25.4" size="1.6764" layer="22" font="vector" ratio="15" rot="MR180" align="center-left">OUT&lt;-IN</text>
 <text x="67.945" y="2.54" size="1.778" layer="16" font="vector" ratio="15" rot="MR0">V10</text>
-<dimension x1="0" y1="0" x2="0" y2="110.49" x3="-16.51" y3="55.245" textsize="1.778" textratio="15" layer="47" unit="inch"/>
+<dimension x1="0" y1="0" x2="0" y2="110.49" x3="-29.21" y3="55.245" textsize="2.54" textratio="15" layer="47" unit="inch"/>
 <text x="11.43" y="-19.05" size="2.54" layer="47" ratio="15">All Dimensions in inches
 PCB fits inside a 1590BB type case.</text>
-<dimension x1="0" y1="110.49" x2="85.09" y2="110.49" x3="42.545" y3="154.94" textsize="2.54" textratio="15" layer="47" unit="inch"/>
-<dimension x1="0" y1="110.49" x2="68.58" y2="110.49" x3="34.29" y3="146.05" textsize="2.54" textratio="15" layer="47" unit="inch"/>
-<dimension x1="0" y1="110.49" x2="16.51" y2="110.49" x3="8.255" y3="130.81" textsize="2.54" textratio="15" layer="47" unit="inch"/>
+<dimension x1="0" y1="110.49" x2="85.09" y2="110.49" x3="42.545" y3="162.56" textsize="2.54" textratio="15" layer="47" unit="inch"/>
+<dimension x1="0" y1="110.49" x2="68.58" y2="110.49" x3="34.29" y3="154.94" textsize="2.54" textratio="15" layer="47" unit="inch"/>
+<dimension x1="0" y1="110.49" x2="16.51" y2="110.49" x3="8.255" y3="142.24" textsize="2.54" textratio="15" layer="47" unit="inch"/>
 <dimension x1="67.31" y1="24.13" x2="0" y2="0" x3="33.655" y3="-26.67" textsize="2.54" textratio="15" layer="47" dtype="horizontal" unit="inch"/>
 <dimension x1="67.31" y1="11.43" x2="-8.89" y2="0" x3="-6.35" y3="5.715" textsize="2.54" textratio="15" layer="47" dtype="vertical" unit="inch"/>
 <dimension x1="68.58" y1="111.76" x2="91.44" y2="133.35" x3="105.41" y3="133.35" textsize="2.54" textratio="15" layer="47" dtype="leader" unit="inch"/>
@@ -611,7 +611,7 @@ possibly larger to allow for plug jacket.</text>
 <wire x1="15.736" y1="27.016" x2="15.736" y2="25.708" width="0.2032" layer="21"/>
 <wire x1="15.082" y1="26.362" x2="16.39" y2="26.362" width="0.2032" layer="22"/>
 <wire x1="15.736" y1="27.016" x2="15.736" y2="25.708" width="0.2032" layer="22"/>
-<dimension x1="0" y1="110.49" x2="52.07" y2="110.49" x3="26.035" y3="138.684" textsize="2.54" textratio="15" layer="47" unit="inch"/>
+<dimension x1="0" y1="110.49" x2="52.07" y2="110.49" x3="26.035" y3="148.844" textsize="2.54" textratio="15" layer="47" unit="inch"/>
 <text x="2.54" y="95.25" size="1.27" layer="22" font="vector" ratio="15" rot="MR270" align="top-center">GND</text>
 <text x="2.54" y="95.25" size="1.27" layer="21" font="vector" ratio="15" rot="R90" align="top-center">GND</text>
 <text x="81.28" y="95.25" size="1.27" layer="22" font="vector" ratio="15" rot="MR270" align="top-center">GND</text>
@@ -686,6 +686,11 @@ possibly larger to allow for plug jacket.</text>
 <wire x1="77.47" y1="50.8" x2="85.09" y2="50.8" width="0.2032" layer="22"/>
 <wire x1="77.47" y1="53.34" x2="85.09" y2="53.34" width="0.2032" layer="22"/>
 <text x="82.55" y="63.5" size="2.1844" layer="21" font="vector" ratio="15" rot="R90">Proto Pedal</text>
+<dimension x1="78.74" y1="0" x2="81.28" y2="10.16" x3="109.22" y3="5.08" textsize="2.54" textratio="15" layer="47" dtype="vertical" unit="inch"/>
+<dimension x1="3.81" y1="0" x2="3.81" y2="100.33" x3="-20.2457" y3="50.165" textsize="2.54" textratio="15" layer="47" unit="inch"/>
+<dimension x1="0" y1="101.6" x2="3.81" y2="101.6" x3="1.905" y3="133.35" textsize="2.54" textratio="15" layer="47" unit="inch"/>
+<dimension x1="81.28" y1="10.16" x2="100.33" y2="19.05" x3="107.95" y3="19.05" textsize="2.54" textratio="15" layer="47" dtype="leader" unit="inch"/>
+<text x="101.6" y="20.32" size="2.54" layer="47" ratio="15">4x Standoff holes clear 4-40 thread.</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
@@ -3203,6 +3208,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="31.75" y1="22.86" x2="33.274" y2="21.336" width="0.4064" layer="1"/>
 <wire x1="36.29" y1="25.4" x2="36.195" y2="25.305" width="0.4064" layer="1"/>
 <wire x1="36.195" y1="25.305" x2="36.195" y2="21.336" width="0.4064" layer="1"/>
+<wire x1="36.275" y1="25.4" x2="39.29" y2="25.4" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$5">
 <contactref element="JP54" pad="5"/>
@@ -4181,6 +4187,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="C1" pad="P$1"/>
 <contactref element="TP5" pad="1"/>
 <wire x1="13.97" y1="25.4" x2="18.415" y2="25.4" width="0.4064" layer="1"/>
+<wire x1="18.415" y1="25.4" x2="13.97" y2="25.4" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$68">
 <contactref element="TP6" pad="1"/>
