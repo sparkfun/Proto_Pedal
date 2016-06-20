@@ -36,8 +36,8 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -46,15 +46,15 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -1974,10 +1974,10 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pad name="P$5" x="0" y="0" drill="1.2" diameter="2.54"/>
 <pad name="P$6" x="0" y="-4.8" drill="1.2" diameter="2.54"/>
 <circle x="0" y="0" radius="6.1" width="0.127" layer="51"/>
-<wire x1="-9.85" y1="8.5" x2="9.85" y2="8.5" width="0.127" layer="21"/>
-<wire x1="9.85" y1="8.5" x2="9.85" y2="-8.5" width="0.127" layer="21"/>
-<wire x1="9.85" y1="-8.5" x2="-9.85" y2="-8.5" width="0.127" layer="21"/>
-<wire x1="-9.85" y1="-8.5" x2="-9.85" y2="8.5" width="0.127" layer="21"/>
+<wire x1="-9.85" y1="8.5" x2="9.85" y2="8.5" width="0.2032" layer="21"/>
+<wire x1="9.85" y1="8.5" x2="9.85" y2="-8.5" width="0.2032" layer="21"/>
+<wire x1="9.85" y1="-8.5" x2="-9.85" y2="-8.5" width="0.2032" layer="21"/>
+<wire x1="-9.85" y1="-8.5" x2="-9.85" y2="8.5" width="0.2032" layer="21"/>
 <text x="-2.81" y="1.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.81" y="-2.905" size="1.27" layer="27">&gt;VALUE</text>
 <pad name="P$7" x="5.3" y="4.8" drill="1.2" diameter="2.54"/>
@@ -2015,14 +2015,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="TIP-NORM" x="16.8" y="4.35" drill="1.6"/>
 <pad name="TIP" x="16.8" y="-6.95" drill="1.6"/>
 <wire x1="0" y1="6.23" x2="0" y2="-8.77" width="0.127" layer="21"/>
-<wire x1="0" y1="-8.77" x2="21" y2="-8.77" width="0.127" layer="21"/>
-<wire x1="21" y1="-8.77" x2="21" y2="-3.97" width="0.127" layer="21"/>
-<wire x1="21" y1="-3.97" x2="21" y2="4.03" width="0.127" layer="21"/>
-<wire x1="21" y1="4.03" x2="21" y2="6.23" width="0.127" layer="21"/>
-<wire x1="21" y1="6.23" x2="0" y2="6.23" width="0.127" layer="21"/>
-<wire x1="0.73" y1="0.03" x2="24" y2="0.03" width="0.127" layer="21"/>
-<wire x1="24" y1="0.03" x2="24" y2="3.03" width="0.127" layer="21"/>
-<wire x1="24" y1="0.03" x2="24" y2="-2.97" width="0.127" layer="21"/>
+<wire x1="0" y1="-8.77" x2="21" y2="-8.77" width="0.2032" layer="21"/>
+<wire x1="21" y1="-8.77" x2="21" y2="-3.97" width="0.2032" layer="21"/>
+<wire x1="21" y1="-3.97" x2="21" y2="4.03" width="0.2032" layer="21"/>
+<wire x1="21" y1="4.03" x2="21" y2="6.23" width="0.2032" layer="21"/>
+<wire x1="21" y1="6.23" x2="0" y2="6.23" width="0.2032" layer="21"/>
+<wire x1="0.095" y1="0.03" x2="24" y2="0.03" width="0.2032" layer="21"/>
+<wire x1="24" y1="0.03" x2="24" y2="3.03" width="0.2032" layer="21"/>
+<wire x1="24" y1="0.03" x2="24" y2="-2.97" width="0.2032" layer="21"/>
 <wire x1="-9" y1="5.53" x2="0" y2="5.53" width="0.127" layer="51"/>
 <wire x1="0" y1="5.53" x2="0" y2="-5.47" width="0.127" layer="51"/>
 <wire x1="0" y1="-5.47" x2="-9" y2="-5.47" width="0.127" layer="51"/>
@@ -2035,8 +2035,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-4" y1="4.53" x2="-3" y2="-4.47" width="0.127" layer="51"/>
 <wire x1="-3" y1="4.53" x2="-2" y2="-4.47" width="0.127" layer="51"/>
 <wire x1="-2" y1="4.53" x2="-1" y2="-4.47" width="0.127" layer="51"/>
-<wire x1="24" y1="3.03" x2="21" y2="4.03" width="0.127" layer="21"/>
-<wire x1="24" y1="-2.97" x2="21" y2="-3.97" width="0.127" layer="21"/>
+<wire x1="24" y1="3.03" x2="21" y2="4.03" width="0.2032" layer="21"/>
+<wire x1="24" y1="-2.97" x2="21" y2="-3.97" width="0.2032" layer="21"/>
 <wire x1="-9" y1="0.03" x2="-8.1" y2="0.03" width="0.127" layer="51"/>
 <text x="2.54" y="0" size="1.778" layer="25" font="vector">&gt;NAME</text>
 <text x="2.54" y="-2.54" size="1.778" layer="27" font="vector">&gt;VALUE</text>
