@@ -1,0 +1,32 @@
+#include <Audio.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <SD.h>
+#include <SerialFlash.h>
+
+// GUItool: begin automatically generated code
+AudioInputI2S            i2s1;           //xy=110,128
+AudioSynthWaveformDc     dc1;            //xy=195,380
+AudioFilterBiquad        biquad3;        //xy=278,188
+AudioFilterBiquad        biquad1;        //xy=279,107
+AudioFilterBiquad        biquad2;        //xy=279,149
+AudioEffectMultiply      multiply1;      //xy=367,334
+AudioSynthWaveformSine   sine1;          //xy=389,425
+AudioMixer4              mixer1;         //xy=474,154
+AudioAnalyzePeak         peak1;          //xy=577,259
+AudioFilterStateVariable filter1;        //xy=594,327
+AudioOutputI2S           i2s2;           //xy=750,302
+AudioConnection          patchCord1(i2s1, 0, biquad1, 0);
+AudioConnection          patchCord2(i2s1, 0, biquad2, 0);
+AudioConnection          patchCord3(i2s1, 0, biquad3, 0);
+AudioConnection          patchCord4(dc1, 0, multiply1, 1);
+AudioConnection          patchCord5(biquad3, 0, mixer1, 2);
+AudioConnection          patchCord6(biquad1, 0, mixer1, 0);
+AudioConnection          patchCord7(biquad2, 0, mixer1, 1);
+AudioConnection          patchCord8(multiply1, 0, filter1, 0);
+AudioConnection          patchCord9(multiply1, peak1);
+AudioConnection          patchCord10(sine1, 0, filter1, 1);
+AudioConnection          patchCord11(mixer1, 0, multiply1, 0);
+AudioConnection          patchCord12(filter1, 0, i2s2, 0);
+AudioControlSGTL5000     sgtl5000_1;     //xy=728,84
+// GUItool: end automatically generated code
