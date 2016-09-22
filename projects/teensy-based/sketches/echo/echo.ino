@@ -41,7 +41,6 @@
 
 AudioSynthNoiseWhite noise;
 
-AudioFilterBiquad        infilt;
 AudioMixer4              inmix;
 AudioSynthWaveformDc     dlyctrl;
 AudioEffectModDelay      xdly;
@@ -56,8 +55,9 @@ AudioControlSGTL5000 sgtl5000_1;
 
 /***************/
 
-AudioConnection     patchCord01(i2s2, 0, infilt, 0);
-AudioConnection     patchCord02(infilt, 0, inmix, 0);
+////AudioConnection     patchCord01(i2s2, 0, infilt, 0);
+////AudioConnection     patchCord02(infilt, 0, inmix, 0);
+AudioConnection     patchCord01(i2s2, 0, inmix, 0);
 AudioConnection     patchCord03(noise, 0, inmix, 2);
 //AudioConnection     patchCord04(inmix, 0, fbdist, 0);
 //AudioConnection     patchCord05(fbdist, 0, xdly, 0);
@@ -117,7 +117,7 @@ void param_update()
   inmix.gain(1, (float)((value|0x03)*1.2/0x3ff));
 
   value = analogRead(A1);
-  dlyctrl.amplitude((float)(value | 0x3 )/0x3ff, 25);
+  dlyctrl.amplitude((float)(value | 0x3 )/0x3ff, 100);
   //dlyctrl.amplitude(0.5);
 
   value = analogRead(A2);
@@ -128,7 +128,7 @@ void param_update()
   delayfilthp.frequency(100 + (value| 0x03));
 
   value = analogRead(A3);
-  delayfilthp.resonance(((float)(value|0x03)/0x3ff)* 4);
+  delayfilthp.resonance(((float)(value|0x03)/0x3ff)* 3);
   //delayfiltlp.resonance((float)value/0x3ff);
 
 
@@ -157,14 +157,16 @@ void setup() {
   //inmix.gain(1, 0.9);// set by knob
   inmix.gain(2, 0.02);
 
-  infilt.setLowpass(0, 2500, 0.7);
-  infilt.setHighpass(1, 40, 0.7);
+  //infilt.setLowpass(0, 2500, 0.7);
+  //infilt.setHighpass(1, 40, 0.7);
 
   outmix.gain(0, 1.0);
   outmix.gain(1, 1.0);
 
   xdly.setbuf(LEN, delaybuf);
 
+  //delayfiltlp.resonance(2.0);
+  
   sgtl5000_1.enable();
   sgtl5000_1.inputSelect(AUDIO_INPUT_LINEIN );
 
