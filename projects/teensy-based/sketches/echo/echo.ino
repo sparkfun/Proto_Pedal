@@ -1,4 +1,4 @@
-/* Cosmic-delay demo sketch.
+/* Teensy pedal echo demo sketch.
  *  
  * A tape-delay inspired delay sketch, with heavy filtering and 
  * subtle distortion in the feedback loop.
@@ -63,6 +63,7 @@ AudioConnection     patchCord03(noise, 0, inmix, 2);
 //AudioConnection     patchCord05(fbdist, 0, xdly, 0);
 AudioConnection     patchCord04(inmix, 0, xdly, 0);
 AudioConnection     patchCord06(xdly, 0, delayfilthp, 0);
+//AudioConnection     patchCord06(xdly, 0, inmix, 1);
 AudioConnection     patchCord07(delayfilthp, 2, delayfiltlp, 0);
 //AudioConnection     patchCord08(delayfiltlp, 0, inmix, 1);
 //AudioConnection     patchCord08(delayfiltlp, 0, fbdist, 0);
@@ -77,6 +78,7 @@ AudioConnection     patchCord100(dlyctrl,0, xdly, 1);
 
 AudioConnection     patchCord09(i2s2, 0, outmix, 0);
 AudioConnection     patchCord10(delayfiltlp, 0, outmix, 1);
+//AudioConnection     patchCord10(xdly, 0, outmix, 1);
 
 AudioConnection     patchCord11(outmix, 0, i2s1, 0);
 AudioConnection     patchCord12(outmix, 0, i2s1, 1);
@@ -97,34 +99,36 @@ void param_update()
 {
   uint16_t value;
 #if 0
+  // If you don't have panel controls, here are prebaked settings
 
-  inmix.gain(1, 0.9);
-
-  //lue = analogRead(A1);
-  //value &= 0x3fc;
-  //value |=1;
-  dlyctrl.amplitude(1.0);//((float)value/0x3ff, 2);
-
+  inmix.gain(1, 0.7);
+  dlyctrl.amplitude(1.0);
+  delayfilthp.frequency(150);
+  delayfilthp.resonance(1.0);
+  delayfiltlp.frequency(1500);
+  
 
 #else
-  // ADC gives us 10 bits of data.
+  // ADC gives us 10 bits of data, but the bottom two are a bit noisy.
+  // So we'll make them always 1's with a series of bitwise or with 3 ( | 0x03 ).
 
   // Set feedback level
   value = analogRead(A7);
-  inmix.gain(1, (float)(value*1.2/0x3ff));
+  inmix.gain(1, (float)((value|0x03)*1.2/0x3ff));
 
   value = analogRead(A1);
-  dlyctrl.amplitude((float)value/0x3ff, 2);
+  dlyctrl.amplitude((float)(value | 0x3 )/0x3ff, 25);
+  //dlyctrl.amplitude(0.5);
 
   value = analogRead(A2);
   // 10730 = 10230 + 500
-  delayfiltlp.frequency(500 + (value*10));
+  delayfiltlp.frequency(500 + ((value| 0x03)*10));
 
   value = analogRead(A6);
-  delayfilthp.frequency(100 + value);
+  delayfilthp.frequency(100 + (value| 0x03));
 
   value = analogRead(A3);
-  delayfilthp.resonance(((float)value/0x3ff)* 4);
+  delayfilthp.resonance(((float)(value|0x03)/0x3ff)* 4);
   //delayfiltlp.resonance((float)value/0x3ff);
 
 
@@ -146,13 +150,6 @@ void setup() {
 
   AudioNoInterrupts();
 
-#if 0
-  gen.frequency(100);
-  gen.amplitude(0.10);
-  gen.begin(WAVEFORM_SAWTOOTH);
-  //gen.begin(WAVEFORM_SQUARE);
-#endif
-
   // Adding in some noise can trigger spontaneous breakaway.
   //noise.amplitude(0.025);
 
@@ -160,60 +157,24 @@ void setup() {
   //inmix.gain(1, 0.9);// set by knob
   inmix.gain(2, 0.02);
 
-  // Telephone freq response 
-  // Lowpass tunung and Q have a lot to do with breakaway character and behavior!
-  // If the Q gets too high, runaway gets more distorted.  0.4 or 0.5 make for
-  // more aggressive breakaway, but also get crunchy.  0.2 almost doesn't break.
-  //delayfilt.setLowpass(0, 5000, 0.4);
-  //delayfilt.setHighpass(1, 120, 0.6);
-  delayfilthp.resonance(0.6);
-  delayfilthp.frequency(120);
-  delayfiltlp.resonance(0.6);
-  delayfiltlp.frequency(5000);
-
   infilt.setLowpass(0, 2500, 0.7);
   infilt.setHighpass(1, 40, 0.7);
 
   outmix.gain(0, 1.0);
   outmix.gain(1, 1.0);
 
-#if 0
-  vca.attack(50);
-  vca.decay(50);
-  vca.sustain(0.5);
-  vca.release(25);
-#endif
-
   xdly.setbuf(LEN, delaybuf);
 
-#if 1
   sgtl5000_1.enable();
   sgtl5000_1.inputSelect(AUDIO_INPUT_LINEIN );
-//  sgtl5000_1.inputSelect(AUDIO_INPUT_MIC );
-  //sgtl5000_1.volume(00.5);
-  //sgtl5000_1.muteHeadphone();
-//  sgtl5000_1.unmuteHeadphone();
-//  sgtl5000_1.micGain(0); //- seems to influence noise on input?
 
-  sgtl5000_1.lineInLevel(2);
+  sgtl5000_1.lineInLevel(0,2);
   sgtl5000_1.lineOutLevel(13);
 
-  //sgtl5000_1.autoVolumeDisable();
-  //  sgtl5000_1.unmuteLineout();
-
-  //sgtl5000_1.adcHighPassFilterDisable();
-  //sgtl5000_1.audioProcessorDisable();
-#else
-  sgtl5000_1.enable();
-  sgtl5000_1.inputSelect(AUDIO_INPUT_LINEIN );
-  //sgtl5000_1.inputSelect(AUDIO_INPUT_MIC );
-  //sgtl5000_1.volume(00.5);
-  //sgtl5000_1.muteHeadphone();
-  sgtl5000_1.unmuteHeadphone();
-  sgtl5000_1.micGain(0); //- seems to influence noise on input?
-
-  sgtl5000_1.lineInLevel(6);
-#endif
+  // Testing...these appear to address a little background noise...
+  sgtl5000_1.muteHeadphone();
+  sgtl5000_1.adcHighPassFilterDisable();
+  sgtl5000_1.audioProcessorDisable();
 
   AudioInterrupts();
 
