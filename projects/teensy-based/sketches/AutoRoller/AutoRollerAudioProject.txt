@@ -15,7 +15,10 @@ AudioSynthWaveformSine   sine1;          //xy=389,425
 AudioMixer4              mixer1;         //xy=474,154
 AudioAnalyzePeak         peak1;          //xy=577,259
 AudioFilterStateVariable filter1;        //xy=594,327
-AudioOutputI2S           i2s2;           //xy=750,302
+AudioFilterStateVariable filter2;        //xy=627,407
+AudioFilterStateVariable filter3;        //xy=661,487
+AudioFilterStateVariable filter4;        //xy=690,566
+AudioOutputI2S           i2s2;           //xy=842,592
 AudioConnection          patchCord1(i2s1, 0, biquad1, 0);
 AudioConnection          patchCord2(i2s1, 0, biquad2, 0);
 AudioConnection          patchCord3(i2s1, 0, biquad3, 0);
@@ -26,7 +29,13 @@ AudioConnection          patchCord7(biquad2, 0, mixer1, 1);
 AudioConnection          patchCord8(multiply1, 0, filter1, 0);
 AudioConnection          patchCord9(multiply1, peak1);
 AudioConnection          patchCord10(sine1, 0, filter1, 1);
-AudioConnection          patchCord11(mixer1, 0, multiply1, 0);
-AudioConnection          patchCord12(filter1, 0, i2s2, 0);
+AudioConnection          patchCord11(sine1, 0, filter2, 1);
+AudioConnection          patchCord12(sine1, 0, filter3, 1);
+AudioConnection          patchCord13(sine1, 0, filter4, 1);
+AudioConnection          patchCord14(mixer1, 0, multiply1, 0);
+AudioConnection          patchCord15(filter1, 0, filter2, 0);
+AudioConnection          patchCord16(filter2, 0, filter3, 0);
+AudioConnection          patchCord17(filter3, 0, filter4, 0);
+AudioConnection          patchCord18(filter4, 0, i2s2, 0);
 AudioControlSGTL5000     sgtl5000_1;     //xy=728,84
 // GUItool: end automatically generated code
