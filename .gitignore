@@ -54,9 +54,10 @@ local.properties
 ## Eagle
 #############
 
-# Ignore the board and schematic backup files
+# Ignore the library, board and schematic backup files
 *.b#?
 *.s#?
+*.l#?
 
 
 #################
