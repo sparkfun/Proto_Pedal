@@ -38,8 +38,14 @@ void setup() {
   sgtl5000_1.enable();
   sgtl5000_1.inputSelect(AUDIO_INPUT_LINEIN );
 
-  sgtl5000_1.lineInLevel(2);
+  sgtl5000_1.lineInLevel(0,2);
   sgtl5000_1.lineOutLevel(13);
+
+  // Testing...
+  sgtl5000_1.muteHeadphone();
+  //sgtl5000_1.muteLineout();
+  sgtl5000_1.adcHighPassFilterDisable();
+  sgtl5000_1.audioProcessorDisable();
 
   dc1.amplitude(1.0);
 
