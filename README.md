@@ -1,49 +1,49 @@
-Part Name - IMA Part-123 Not a Part345 Breakout
+SparkFun Proto Pedal
 ========================================
 
-See bug 10262.
+![SparkFun Proto Pedal](https://cdn.sparkfun.com//assets/parts/1/0/1/8/5/13124-05.jpg)
 
-[![Part Name](URL for picture of part)
-*Part Name (SKU)*](URL for product on Sparkfun.com)
+[*SparkFun Proto Pedal*](https://www.sparkfun.com/products/13124)
 
-Basic description of the part [The datasheet can be found here.](http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/IMU/PS-MPU-9150A.pdf)
+[*SparkFun Proto Pedal Chassis*](https://www.sparkfun.com/products/13967)
 
-More information can be found on the Wiki for this repo. 
+The SparkFun Proto Pedal is breatboard featuring prewired I/O boilerplate for building guitar stompboxes.  We also offer a matching predrilled chassis.
 
-This part was created in Eagle vXXX, this firmware was created in Arduino vBlahBlahBlah, etc. 
-
-
-
+_**If you're looking for the Teensy Project Sketches**_ [they're here](https://github.com/sparkfun/Proto_Pedal/tree/master/projects/teensy-based).  Please remember to check the individual sketches for further notes and details in their respective `README.md` files.
 
 Repository Contents
 -------------------
 
-* **/Enclosure** - 3D model of an enclosure designed for this particular part
-* **/Firmware** - Any firmware that the part ships with, 
-* **/Fritzing** - Fritzing Example wiring images
-* **/Hardware** - All Eagle design files (.brd, .sch, .STL)
-* **/Libraries** - All Arduino libraries and board examples
-* **/Production** - Test bed files and production panel files
-* **/Software** - Any desktop based software used to work with this project.
-* **[Wiki](URL for GitHub Wiki) - Wiki with examples or helpful information for product
+* **/Hardware** - Eagle design files (.brd, .sch)
+* **/Mechanical** - Enclosure files and related information
+* **/Production** - Production panel files (.brd)
+* **/Projects** - Example circuits build on the Proto Pedal <PRODUCT NAME>
+
+Documentation
+--------------
+* **[Proto Pedal Assembly and Theory Guide](https://learn.sparkfun.com/tutorials/proto-pedal-assembly-and-theory-guide)** - Information to help get started.
+* **[Chassis Hookup Guide](https://learn.sparkfun.com/tutorials/proto-pedal-chassis-hookup-guide)** - Drilling and painting the enclosure.
+* **[Analog Equalizer Project](https://learn.sparkfun.com/tutorials/proto-pedal-example-analog-equalizer-project)** - the gyrator based two-band EQ example.
+* **[Teensy-Audio based Programmable Digital Pedal](https://learn.sparkfun.com/tutorials/proto-pedal-example-programmable-digital-pedal)** - building a DSP development platform
 
 Product Versions
 ----------------
-* [Part SKU](part URL)- Basic part and short description here
-* [Retail part SKU] (retail URL)- Retail packaging of standard description here
-* [Any other parts this repo covers](any other URLs) - Description of said parts
+* [SparkFun Proto Pedal](https://www.sparkfun.com/products/13124)
+* [SparkFun Proto Pedal Chassis](https://www.sparkfun.com/products/13967)
 
 Version History
 ---------------
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) description 
-* [vEyyFyyZyyHyyLyySyy](URL for tag specific to this version) description
+* [441c191](https://github.com/sparkfun/Proto_Pedal/commit/441c1917a6b56c2a821627207be28ff88913c089) - Initial Release
 
 License Information
 -------------------
-The hardware is released under [Creative Commons ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
-The code is beerware; if you see me (or any other SparkFun employee) at the local, and you've found our code helpful, please buy us a round!
+
+This product is _**open source**_!
+
+Please review the LICENSE.md file for license information.
+
+If you have any questions or concerns on licensing, please contact techsupport@sparkfun.com.
 
 Distributed as-is; no warranty is given.
 
-->Any collaboration credit should appear here.<-
-
+- Your friends at SparkFun.
