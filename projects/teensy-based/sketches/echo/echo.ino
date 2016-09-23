@@ -112,12 +112,19 @@ void param_update()
   // ADC gives us 10 bits of data, but the bottom two are a bit noisy.
   // So we'll make them always 1's with a series of bitwise or with 3 ( | 0x03 ).
 
+  static uint16_t last_time;
+
   // Set feedback level
   value = analogRead(A7);
   inmix.gain(1, (float)((value|0x03)*1.2/0x3ff));
 
   value = analogRead(A1);
-  dlyctrl.amplitude((float)(value | 0x3 )/0x3ff, 100);
+  value |= 0x03;
+  if( value != last_time)
+  {
+    dlyctrl.amplitude((float)(value )/0x3ff, 200);
+    last_time = value;
+  }
   //dlyctrl.amplitude(0.5);
 
   value = analogRead(A2);
@@ -128,13 +135,9 @@ void param_update()
   delayfilthp.frequency(100 + (value| 0x03));
 
   value = analogRead(A3);
-  delayfilthp.resonance(((float)(value|0x03)/0x3ff)* 3);
+  delayfilthp.resonance(((float)(value|0x03)/0x3ff)* 2);
   //delayfiltlp.resonance((float)value/0x3ff);
 
-
-  // output volume control (headphones only...).
-//  value = analogRead(A3);
-//  sgtl5000_1.volume((float)value/0x3ff);
 #endif  
 }
 
