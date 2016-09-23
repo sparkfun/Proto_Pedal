@@ -30,7 +30,13 @@ The Highpass resonance contributes to the feedback.  Both it and the feedback co
 It can be a fun effect, but it's got some ugly details.
 
 * The distortion in the feedback loop wasn't especially useful.  The mixers already use saturating math, so they hard clip.
+* There's also a white noise block feeding the input mixer, but it's usually turned off.  It's possible to introduce an almost inaudible amount, to get it to run away with no other input.
 * The delay line gets wonky & distorted if the modulation input is discontinuous.  We do several things to help smooth it.
   * We throw away the noisy bottom LSBs of that ADC channel.
   * We're using a DC block to generate the timing signal for the delay, and setting the ramp time parameter to be longer than necessary.  If you want to make things sound more rubbery, turn that time way up...
   * We keep track of the last value sent to that DC block, so we aren't calling it continually, resetting the time parameter.
+
+There's also the issue of noise floor performance.  What we've learned so far
+
+* Having the USB port connected contributes to the 60/120 Hz in the background.
+* Having the USB port connected & talking to a serial app causes even more noise.

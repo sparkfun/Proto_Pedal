@@ -46,8 +46,6 @@ AudioSynthWaveformDc     dlyctrl;
 AudioEffectModDelay      xdly;
 AudioFilterStateVariable delayfilthp;
 AudioFilterStateVariable delayfiltlp;
-AudioEffectCubicDistort  fbdist;
-AudioMixer4              outmix;
 
 AudioOutputI2S       i2s1;           
 AudioInputI2S        i2s2;           
@@ -59,29 +57,15 @@ AudioControlSGTL5000 sgtl5000_1;
 ////AudioConnection     patchCord02(infilt, 0, inmix, 0);
 AudioConnection     patchCord01(i2s2, 0, inmix, 0);
 AudioConnection     patchCord03(noise, 0, inmix, 2);
-//AudioConnection     patchCord04(inmix, 0, fbdist, 0);
-//AudioConnection     patchCord05(fbdist, 0, xdly, 0);
 AudioConnection     patchCord04(inmix, 0, xdly, 0);
 AudioConnection     patchCord06(xdly, 0, delayfilthp, 0);
-//AudioConnection     patchCord06(xdly, 0, inmix, 1);
 AudioConnection     patchCord07(delayfilthp, 2, delayfiltlp, 0);
-//AudioConnection     patchCord08(delayfiltlp, 0, inmix, 1);
-//AudioConnection     patchCord08(delayfiltlp, 0, fbdist, 0);
-//AudioConnection     patchCord05(fbdist, 0, inmix, 1);
 AudioConnection     patchCord05(delayfiltlp, 0, inmix, 1);
-
-
-//AudioConnection     patchCord05(xdly, 0);
-
 
 AudioConnection     patchCord100(dlyctrl,0, xdly, 1);
 
-AudioConnection     patchCord09(i2s2, 0, outmix, 0);
-AudioConnection     patchCord10(delayfiltlp, 0, outmix, 1);
-//AudioConnection     patchCord10(xdly, 0, outmix, 1);
-
-AudioConnection     patchCord11(outmix, 0, i2s1, 0);
-AudioConnection     patchCord12(outmix, 0, i2s1, 1);
+AudioConnection     patchCord11(inmix, 0, i2s1, 0);
+AudioConnection     patchCord12(inmix, 0, i2s1, 1);
 
 /***************/
 
@@ -162,9 +146,6 @@ void setup() {
 
   //infilt.setLowpass(0, 2500, 0.7);
   //infilt.setHighpass(1, 40, 0.7);
-
-  outmix.gain(0, 1.0);
-  outmix.gain(1, 1.0);
 
   xdly.setbuf(LEN, delaybuf);
 
